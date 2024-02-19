@@ -45,10 +45,11 @@ namespace _10___Classe_articoli
                 get => annodiscadenza;
                 set => annodiscadenza = value;
             }
-            private double scontoalimentari()
+            private double Scontoalimentari()
             {
                 if (annodiscadenza == DateTime.Now.Year)
-                prezzounitario = prezzounitario - prezzounitario * 20 / 100;
+                    prezzounitario = prezzounitario - prezzounitario * 20 / 100;
+
                 return prezzounitario;
             }
         }
@@ -58,7 +59,11 @@ namespace _10___Classe_articoli
         }
         class AlimentareFresco : Articolo
         {
+            private double Scontofresco()
+            {
 
+                return prezzounitario;
+            }
         }
         public Form1()
         {
